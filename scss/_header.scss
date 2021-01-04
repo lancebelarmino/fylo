@@ -1,0 +1,41 @@
+.header {
+    margin-top: 64px;
+
+    &__logo {
+        height: 48px;
+    }
+
+    &__links {
+        li {
+            list-style: none;
+        }
+
+        a {
+            font-size: 1rem;
+            color: $veryDarkBlue;
+        }
+
+        :not(:last-child) {
+            margin-right: 56px;
+        }
+    }
+
+    @include breakpoint-down (mobile) {
+        margin-top: 35px;
+
+        &__logo {
+            height: 36px;
+        }
+
+        &__links {
+            a {
+                font-size: 1.125rem;
+            }
+
+            :not(:last-child) {
+                margin-right: 34px;
+            }
+        }
+    }
+
+}

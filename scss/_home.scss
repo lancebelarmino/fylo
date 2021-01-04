@@ -1,0 +1,350 @@
+.hero {
+  margin-top: 84px;
+
+  &__text {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex: 1;
+    padding-right: 50px;
+  }
+
+  &__paragraph {
+    margin: 30px 0 30px 0;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  &__form {
+    input:focus {
+      box-shadow: (0 0 5px $lightGray);
+      border: 1px solid hsl(238, 22%, 44%);
+    }
+
+    &__btn {
+      padding: 16px 60px;
+      margin-left: 16px;
+    }
+  }
+
+  &__image {
+    flex: 1;
+    width: 640px;
+  }
+
+  @include breakpoint-down (tablet) {
+    .flex {
+      align-items: center;
+    }
+
+    &__form__btn {
+      margin: 20px 0 0 0;
+      display: block;
+    }
+
+    &__image {
+      min-width: 60%;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint-down (mobile) {
+    margin-top: 120px;
+    text-align: center;
+
+    .flex {
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__text {
+      margin-top: 74px;
+      padding: 0;
+    }
+
+    &__paragraph {
+      margin: 46px 20px;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+
+    &__form {
+      width: 100%;
+      margin: 0 20px 0 20px;
+
+      input[type=email] {
+        width: 100%;
+      }
+
+      &__btn {
+        width: 100%;
+        margin: 20px auto 0;
+      }
+    }
+  }
+}
+
+.about-divider {
+  min-height: 74px;
+  margin-top: 160px;
+  background-image: url("/assets/bg-curve-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom bottom;
+
+  @include breakpoint-up(wide-desktop){
+    min-height: 200px;
+    background-position: bottom center;
+  }
+
+  @include breakpoint-down (tablet){
+    min-height: 130px;
+    background-position: center bottom;
+  }
+
+  @include breakpoint-down (mobile) {
+    background-image: url("/assets/bg-curve-mobile.svg");
+    min-height: 120px;
+    margin-top: 130px;
+    background-size: cover;
+    background-position: center bottom;
+  }
+}
+
+.about {
+  background-color: #F8F8FE;
+  padding: 112px 0 106px 0;
+
+  &__image {
+    width: 545px;
+    height: 410px;
+  }
+
+  &__text {
+    max-width: 658px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__paragraph {
+    padding: 0 138px 0 0;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 10px;
+    font-weight: 400;
+    color: $moderateCyan;
+    font-size: 1rem;
+  }
+
+  &__btn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid $moderateCyan;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    animation: slide-out 1s cubic-bezier(0.18, 0.43, 0.01, 0.96) 0s 1;
+  }
+
+  &__btn:hover:after {
+    animation: slide-in 0.8s cubic-bezier(0.18, 0.43, 0.01, 0.96) 0s 1;
+    width: 100%;
+    opacity: 1;
+  }
+
+  &__arrow {
+    margin-left: 5px;
+  }
+
+  @include breakpoint-up(wide-desktop){
+    padding: 20px 0 106px 0;
+  }
+
+  @include breakpoint-down (tablet) {
+    .flex {
+      align-items: start;
+    }
+
+    &__image {
+      min-width: 50%;
+      height: 100%;
+    }
+  }
+
+  @include breakpoint-down (mobile) {
+    padding: 82px 0 116px 0;
+
+    .flex {
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      width: 100%;
+      margin-bottom: 132px;
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 46px;
+    }
+
+    &__paragraph {
+      padding: 0;
+      color: $desaturatedBlue;
+      font-size: 1rem;
+      line-height: 1.625rem;
+    }
+
+    &__btn{
+      margin: 30px auto 50px auto;
+    }
+  }
+}
+
+.testimonial {
+  max-width: 356px;
+  margin-top: 46px;
+  padding: 26px 32px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 30px -2px rgba(0, 0, 0, 0.09);
+
+  &__quote {
+    width: 14px;
+    height: 14px;
+  }
+
+  &__text {
+    margin: 12px 0 20px 0;
+    font-size: 0.875rem;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  &__position {
+    font-size: 0.625rem;
+    line-height: 1rem;
+  }
+
+  @include breakpoint-down (mobile) {
+    max-width: 100%;
+    margin: 0 28px 0 28px;
+
+    .flex{
+      flex-direction: row;
+    }
+
+    &__text{
+      font-size: 1rem;
+    }
+
+    &__name {
+      font-size: 1.125rem;
+      line-height: 1.125rem;
+    }
+
+    &__position {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+  }
+}
+
+.access-cta {
+  max-height: 322px;
+  padding: 90px 0;
+  background-color: $desaturatedBlue;
+
+  &__text {
+    max-width: 510px;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+    color: #fff;
+  }
+
+  &__paragraph {
+    color: #fff;
+  }
+
+  input[type=email] {
+    width: 500px;
+    display: block;
+    margin-bottom: 16px;
+    box-shadow: 0px 12px 30px -2px rgba(0, 0, 0, 0.06);
+    transform: all 0.8ms ease;
+  }
+
+  input:focus {
+    box-shadow: (0 0 5px rgba(7, 4, 57, 0.5));
+    border: 1px solid rgba(7, 4, 57, 0.2);
+  }
+
+  &__form__btn {
+    padding: 16px 32px;
+  }
+
+  @include breakpoint-down (tablet) {
+    &__text {
+      max-width: 50%;
+    }
+
+    input[type=email] {
+      width: 30vw;
+    }
+  }
+
+  @include breakpoint-down (mobile) {
+    padding: 84px 0 102px 0;
+    min-height: 500px;
+    text-align: center;
+
+    .flex {
+      flex-direction: column;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    .form {
+      width: 100%;
+      margin-top: 36px;
+      padding: 0 64px;
+    }
+
+    input[type=email] {
+      width: 100%;
+    }
+
+    &__form__btn {
+      width: 100%;
+    }
+  }
+}

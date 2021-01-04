@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./dist/css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="container flex flex-jc-sb">
+      <a href="/index.html">
+        <img class="header__logo" src="assets/logo.svg" alt="Fylo Logo">
+      </a>
+      <ul class="header__links flex flex-ai-c">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container flex flex-jc-sb">
+      <div class="hero__text">
+        <h1 class="hero__title">All your files in one secure location, accessible anywhere.</h1>
+        <p class="hero__paragraph">Fylo stores your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends,
+          family, and co-workers.</p>
+        <form class="form hero__form">
+          <input class="hero__form__input" type="email" placeholder="Enter your email...">
+          <button class="btn btn-primary hero__form__btn"> Get Started</button>
+        </form>
+      </div>
+
+      <img class="hero__image" src="assets/illustration-1.svg" alt="Secure and Accessible Illustration">
+    </div>
+  </section>
+
+  <div class="about-divider"></div>
+  <section class="about">
+    <div class="container flex flex-jc-sb flex-ai-c">
+      <div class="about__text">
+        <h2 class="about__title">Stay productive, wherever you are</h2>
+        <p class="about__paragraph">Never let location be an issue when accessing your files. Fylo has you covered
+          for all of your file storage needs.</p>
+        <p class="about__paragraph">Securely share files and folders with friends, family and colleagues for live
+          collaboration. No email attachments required!</p>
+        <button class="btn about__btn">See how Fylo works <img class="about__arrow" src="/assets/icon-arrow.svg"
+            alt="Arrow Icon"></button>
+
+        <div class="testimonial">
+          <img class="testimonial__quote" src="assets/icon-quotes.svg" alt="Quote Icon">
+          <p class="testimonial__text">Fylo has improved our team productivity by an order of magnitude. Since
+            making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="testimonial__info flex flex-ai-c">
+            <img class="testimonial__avatar" src="assets/avatar-testimonial.jpg" alt="Image of Kyle Burton">
+            <div class="testimonial__credentials">
+              <p class="testimonial__name">Kyle Burton</p>
+              <p class="testimonial__position">Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img class="about__image" src="/assets/illustration-2.svg" alt="Stay Productive, Wherever You Are Illustration">
+    </div>
+  </section>
+
+  <section class="access-cta">
+    <div class="container flex flex-jc-sb flex-ai-c">
+      <div class="access-cta__text">
+        <h3 class="access-cta__title">Get early access today</h3>
+        <p class="access-cta__paragraph"> It only takes a minute to sign up and our free starter tier is extremely
+          generous. If you have any questions,
+          our support team would be happy to help you.</p>
+      </div>
+
+      <form class="form access-cta__form">
+        <input class="access-cta__form__input" type="email" placeholder="email@example.com">
+        <button class="btn btn-primary access-cta__form__btn">Get Started For Free</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <img class="footer__logo" src="assets/logo-light.svg" alt="Fylo Logo">
+      <div class="footer__content flex flex-jc-sb">
+        <section class="footer__row-1">
+          <div class="footer__row-1__phone footer__row-1__grid">
+            <img class="footer__row-1__icon" src="assets/icon-phone.svg" alt="Phone Icon">
+            <p class="footer__row-1__text">Phone: +1-543-123-4567</p>
+          </div>
+          <div class="footer__row-1__email footer__row-1__grid">
+            <img class="footer__row-1__icon footer__email__icon" src="assets/icon-email.svg" alt="Email Icon">
+            <p class="footer__row-1__text">example@fylo.com</p>
+          </div>
+        </section>
+
+        <section class="footer__row-2 footer__links">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__row-3 footer__links">
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__row-4">
+          <div class="footer__row-4__social-link"><i class="fab fa-facebook-f"></i></div>
+          <div class="footer__row-4__social-link"><i class="fab fa-twitter"></i></div>
+          <div class="footer__row-4__social-link"><i class="fab fa-instagram"></i></div>
+        </section>
+      </div>
+    </div>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/lancebelarmino/" target="_blank">Lance Belarmino</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
